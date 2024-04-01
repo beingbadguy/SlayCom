@@ -1,0 +1,19 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+#banner-1 {
+  background-image: url('/banner_1.png');
+  height: 490px;
+  width: 650px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#banner-2 {
+  background-image: url('/banner_2.png');
+  height: 490px;
+  width: 650px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
