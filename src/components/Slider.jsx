@@ -4,7 +4,7 @@ import { FaCaretLeft } from 'react-icons/fa6';
 import React from 'react';
 
 const Slider = () => {
-  const [slider, setSlider] = useState(1);
+  const [slider, setSlider] = useState(0);
 
   return (
     <>
@@ -39,7 +39,7 @@ const Slider = () => {
       {/* slider  */}
       <div className='overflow-hidden ml-0 sm:ml-16 w-[100%] sm:w-[90%]'>
         <div
-          className={` flex translate-x-[${slider}px] overflow-auto md:overflow-visible transition duration-1000 gap-10  m-10  `}
+          className={` flex translate-x-[${slider}px] overflow-auto md:overflow-visible transition-all duration-1000 gap-10  m-10  `}
         >
           <img
             src='https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'

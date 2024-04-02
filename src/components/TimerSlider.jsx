@@ -7,17 +7,16 @@ const TimerSlider = () => {
     if (slider < 2400) {
       setTimeout(() => {
         setSlider(slider + 400);
-      }, 2000);
-      //   console.log(slider);
+      }, 1000);
     } else {
       setSlider(0);
     }
   }, [slider]);
-
+  // console.log(slider);
   return (
     <div>
       <div className='md:w-[95%] h-[80%] duration-2000 delay-5000 overflow-x-hidden  ml-10 mr-10 mb-10'>
-        <div className={`flex translate-x-[-${slider}px] transition gap-20 `}>
+        <div className={`flex translate-x-[-${slider}px] transition-all gap-20 `}>
           <img
             src='https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=2612&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
             className='h-[300px] md:h-[600px]'
