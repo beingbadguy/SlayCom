@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 * {
   /* font-family: 'General Sans', sans-serif; */
   /* font-family: 'Satoshi', sans-serif; */

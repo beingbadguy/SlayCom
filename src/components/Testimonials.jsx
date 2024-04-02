@@ -1,4 +1,6 @@
 import Testimonial from './Testimonial';
+import React from 'react';
+
 import { IoMailUnreadSharp } from 'react-icons/io5';
 const Testimonials = () => {
   return (
@@ -9,7 +11,7 @@ const Testimonials = () => {
       </div>
       <h1>Public Cheers for Us!</h1>
       <p>Find out how our users spreadin the word!</p>
-      <div className='flex flex-wrap items-center justify-center  gap-6 bg-green-300 p-10'>
+      <div className='flex flex-wrap items-center justify-center  gap-6  p-10'>
         <Testimonial />
         <Testimonial />
         <Testimonial />

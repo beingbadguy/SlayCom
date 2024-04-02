@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { FaCaretRight } from 'react-icons/fa6';
 import { FaCaretLeft } from 'react-icons/fa6';
+import React from 'react';
+
 const Slider = () => {
   const [slider, setSlider] = useState(1);
-  console.log(slider);
 
   return (
     <>

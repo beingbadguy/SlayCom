@@ -10,11 +10,13 @@ import Slider from './components/Slider';
 import Company from './components/Company';
 import TimerSlider from './components/TimerSlider';
 import Testimonials from './components/Testimonials';
+import Faqs from './components/Faqs';
+import Footer from './components/Footer';
+import React from 'react';
 
 function App() {
-  // const menuList = useContext(menuContext);
   return (
-    <div className='select-none mb-10'>
+    <div className='select-none'>
       <Header />
       <Menu />
       <Hero />
@@ -24,6 +26,8 @@ function App() {
       <Company />
       <Slider />
       <Testimonials />
+      <Faqs />
+      <Footer />
     </div>
   );
 }

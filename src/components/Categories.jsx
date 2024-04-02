@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Categories = () => {
   return (
     <div className='m-8 sm:m-16'>

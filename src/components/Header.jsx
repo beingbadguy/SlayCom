@@ -11,6 +11,7 @@ import { menuContext } from '../context/Context';
 import { MdArrowRightAlt } from 'react-icons/md';
 import { IoIosCloseCircleOutline } from 'react-icons/io';
 import { useState, useRef } from 'react';
+import React from 'react';
 
 const Header = () => {
   const menuyes = useContext(menuContext);
@@ -22,7 +23,7 @@ const Header = () => {
     <div>
       {/* ad  */}
       <div id='ad' className=' bg-[#2EBB77] p-2 flex items-center justify-evenly'>
-        <div className=' hidden md:flex  flex items-center justify-evenly gap-2'>
+        <div className=' hidden md:flex   items-center justify-evenly gap-2'>
           <CiDeliveryTruck />
           <p className='uppercase text-sm'>free delivery</p>
         </div>
@@ -30,7 +31,7 @@ const Header = () => {
           <LiaRupeeSignSolid />
           <p className='uppercase text-sm'>new customers save 15% use code : AMAN15</p>
         </div>
-        <div className='hidden md:flex  flex items-center justify-evenly gap-2'>
+        <div className='hidden md:flex   items-center justify-evenly gap-2'>
           <FiShoppingBag />
           <p className='uppercase text-sm'>
             shop <span className='italic'>slayed</span> gift cards
@@ -51,6 +52,7 @@ const Header = () => {
           <div
             onClick={() => {
               setsearch(true);
+              inpRef.current.focus();
             }}
           >
             <CiSearch className='w-8 h-8 cursor-pointer ' />
@@ -73,8 +75,8 @@ const Header = () => {
 
       <div
         className={` absolute ${
-          !search ? 'translate-x-[-100%]' : 'translate-x-[0%]'
-        } flex justify-between p-2  transition duration-1000  delay-0  bg-white w-[100%] left-1  rounded-xl`}
+          !search ? 'translate-y-[-200%]' : 'translate-y-[0%]'
+        } flex justify-between p-2  transition duration-1000  delay-0  bg-white w-[100%] left-1 rounded-xl top-1`}
       >
         <input
           ref={inpRef}

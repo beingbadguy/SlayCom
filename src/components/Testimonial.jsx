@@ -1,9 +1,10 @@
 import { BsThreads } from 'react-icons/bs';
 import { CgProfile } from 'react-icons/cg';
+import React from 'react';
 
 const Testimonial = () => {
   return (
-    <div className='bg-white text-black p-6 w-[150px] h-[250px] md:h-auto  md:w-[400px]  rounded text-[10px] md:text-sm'>
+    <div className='bg-white text-black p-6 w-[150px] h-[250px] md:h-auto  md:w-[400px]  rounded text-[10px] md:text-sm border'>
       <div className='flex items-start justify-start gap-2'>
         <CgProfile className=' w-[20px] h-[20px] md:w-[50px] md:h-[50px] ' />
         <div>

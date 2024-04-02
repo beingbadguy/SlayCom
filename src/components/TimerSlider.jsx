@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import React from 'react';
 
 const TimerSlider = () => {
   const [slider, setSlider] = useState(0);
