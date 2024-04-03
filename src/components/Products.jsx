@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Wishlist from './Wishlist';
 import { IoIosAdd } from 'react-icons/io';
 import Cart from './Cart';
+import { IoIosCheckmark } from 'react-icons/io';
 
 const Products = () => {
   const TheArr = useContext(menuContext);
@@ -47,6 +48,7 @@ const Products = () => {
             />
             <div className='flex items-center justify-between w-[285px]'>
               <p className='font-semibold text-xl p-1'>{item.name}</p>
+
               <div
                 onClick={() => {
                   let CartArray = [...wishList];
@@ -55,7 +57,11 @@ const Products = () => {
                   console.log(CartArray[index].isAddedToCart);
                 }}
               >
-                <IoIosAdd className='h-6 w-6 cursor-pointer' />
+                {wishList[index].isAddedToCart ? (
+                  <IoIosCheckmark className='h-6 w-6' />
+                ) : (
+                  <IoIosAdd className='h-6 w-6 cursor-pointer' />
+                )}
               </div>
             </div>
             <div className='flex items-center justify-between  w-[280px]'>
