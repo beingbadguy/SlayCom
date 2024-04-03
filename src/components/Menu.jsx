@@ -13,10 +13,10 @@ const Menu = () => {
           menuYes.menuStatus ? 'translate-y-[-200%]' : 'translate-y-[0%]  '
         }  `}
       >
-        <li className='cursor-pointer hover:text-red-200 active:text-red-200'>Home</li>
-        <li className='cursor-pointer hover:text-red-200  active:text-red-200'>Categories</li>
-        <li className='cursor-pointer hover:text-red-200  active:text-red-200'>Contact</li>
-        <li className='cursor-pointer hover:text-red-200  active:text-red-200'>About Us</li>
+        <li className='cursor-pointer hover:text-green-500 active:text-green-500'>Home</li>
+        <li className='cursor-pointer hover:text-green-500 active:text-green-500'>Categories</li>
+        <li className='cursor-pointer hover:text-green-500 active:text-green-500'>Contact</li>
+        <li className='cursor-pointer hover:text-green-500 active:text-green-500'>About Us</li>
         <li
           onClick={() => {
             menuYes.setmenuStatus(true);

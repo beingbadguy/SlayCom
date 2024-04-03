@@ -7,6 +7,7 @@ export const ContextProvider = (props) => {
   const [menuStatus, setmenuStatus] = useState(true);
   const [homeStatus, sethomeStatus] = useState(true);
   const [wishStatus, setwishStatus] = useState(true);
+  const [cartStatus, setcartStatus] = useState(true);
   const [items, setitems] = useState([
     {
       image:
@@ -118,6 +119,8 @@ export const ContextProvider = (props) => {
         setitems,
         wishStatus,
         setwishStatus,
+        cartStatus,
+        setcartStatus,
       }}
     >
       {props.children}

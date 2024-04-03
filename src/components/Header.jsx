@@ -59,16 +59,20 @@ const Header = () => {
           </div>
           <div
             onClick={() => {
-              // console.log('hello world');
               menuyes.setwishStatus((menuyes.wishStatus = false));
             }}
           >
             <CiHeart className='w-8 h-8 cursor-pointer ' />
           </div>
           <IoPersonOutline className='w-8 h-8 cursor-pointer hidden sm:block' />
-          <div className='flex'>
+          <div
+            className='flex'
+            onClick={() => {
+              menuyes.setcartStatus((menuyes.cartStatus = false));
+            }}
+          >
             <CiBag1 className='w-8 h-8 cursor-pointer' />
-            <div className='text-green-800'>1</div>
+            {/* <div className='text-green-800'>1</div> */}
           </div>
           <div
             onClick={() => {

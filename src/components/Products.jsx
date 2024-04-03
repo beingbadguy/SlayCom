@@ -4,30 +4,34 @@ import { useContext } from 'react';
 import { menuContext } from '../context/Context';
 import { useState } from 'react';
 import Wishlist from './Wishlist';
+import { IoIosAdd } from 'react-icons/io';
+import Cart from './Cart';
 
 const Products = () => {
   const TheArr = useContext(menuContext);
   let arr = TheArr.items;
 
-  let newArr = [];
   let updatedArr = arr.map((item, index) => {
-    return (newArr = {
+    return {
       ...item,
       id: index,
       name: `Product-${index}`,
-      price: `$100`,
-    });
-  });
-  const [wishList, setwishList] = useState(
-    updatedArr.map((item, index) => ({
-      ...item,
+      price: Math.floor(Math.random() * 100 + 1),
       status: false,
-    }))
-  );
+      isAddedToCart: false,
+    };
+  });
 
-  // console.log(wishList);
+  //  updatedArr.map((item, index) => ({
+  //    ...item,
+  //    status: false,
+  //  }));
+
+  const [wishList, setwishList] = useState(updatedArr);
+
   return (
     <>
+      <Cart cart={wishList} />
       <Wishlist wish={wishList} />
       <h1 className=' ml-14 sm:ml-16 mb-2'>New Arrivals</h1>
       <div className='flex flex-wrap justify-center '>
@@ -41,10 +45,22 @@ const Products = () => {
               className=' rounded-xl p-1 border w-[300px]  h-[300px] object-cover cursor-pointer'
               alt=''
             />
-            <p className='font-semibold text-xl p-1'>{item.name}</p>
+            <div className='flex items-center justify-between w-[285px]'>
+              <p className='font-semibold text-xl p-1'>{item.name}</p>
+              <div
+                onClick={() => {
+                  let CartArray = [...wishList];
+                  CartArray[index].isAddedToCart = true;
+                  setwishList(CartArray);
+                  console.log(CartArray[index].isAddedToCart);
+                }}
+              >
+                <IoIosAdd className='h-6 w-6 cursor-pointer' />
+              </div>
+            </div>
             <div className='flex items-center justify-between  w-[280px]'>
               <p id='price' className='italic p-1'>
-                {item.price}
+                ${item.price}
               </p>
               <div
                 onClick={() => {

@@ -49,7 +49,7 @@ const Wishlist = ({ wish }) => {
             <p className='font-semibold text-xl p-1'>{item.name}</p>
             <div className='flex items-center justify-between  w-[200px] p-2'>
               <p id='price' className='italic p-1'>
-                {item.price}
+                ${item.price}
               </p>
               <div
                 onClick={() => {
