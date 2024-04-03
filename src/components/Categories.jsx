@@ -2,9 +2,9 @@ import React from 'react';
 
 const Categories = () => {
   return (
-    <div className='m-8 sm:m-16'>
+    <div className='m-8 sm:m-16 '>
       <h1>Shopping by Categories</h1>
-      <div className='flex justify-evenly mt-6 gap-6 sm:gap-0 flex-wrap'>
+      <div className='flex justify-evenly mt-6 gap-6 sm:gap-0 flex-wrap z-0'>
         <div className='flex flex-col items-center justify-center gap-2 font-bold  '>
           <div className='flex item-center justify-center'>
             <img

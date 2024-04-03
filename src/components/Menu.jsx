@@ -9,7 +9,7 @@ const Menu = () => {
   return (
     <div className=' flex'>
       <ul
-        className={` absolute left-0 top-0 h-screen pt-20 bg-green-300 sm:h-auto sm:pt-0 sm:static text-2xl sm:text-sm sm:bg-transparent  flex flex-col gap-20 sm:gap-[100px] text-center font-bold sm:flex-row sm:justify-center w-[100%] sm:translate-y-[0%] transition  md:ml-[-70px] ${
+        className={`absolute left-0 top-0 h-[96vh] pt-20 bg-white sm:h-auto sm:pt-0 sm:static text-2xl sm:text-sm sm:bg-transparent  flex flex-col gap-20 sm:gap-[100px] text-center font-bold sm:flex-row sm:justify-center w-[100%]  z-999 sm:translate-y-[0%] transition duration-1000   md:ml-[-70px] ${
           menuYes.menuStatus ? 'translate-y-[-200%]' : 'translate-y-[0%]  '
         }  `}
       >
@@ -23,7 +23,7 @@ const Menu = () => {
           }}
           className='sm:hidden absolute left-[46%] bottom-[100px] cursor-pointer'
         >
-          <IoCloseOutline />
+          <IoCloseOutline className='h-12 w-12' />
         </li>
       </ul>
     </div>

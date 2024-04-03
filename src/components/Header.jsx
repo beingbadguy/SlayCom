@@ -57,7 +57,14 @@ const Header = () => {
           >
             <CiSearch className='w-8 h-8 cursor-pointer ' />
           </div>
-          <CiHeart className='w-8 h-8 cursor-pointer hidden sm:block' />
+          <div
+            onClick={() => {
+              // console.log('hello world');
+              menuyes.setwishStatus((menuyes.wishStatus = false));
+            }}
+          >
+            <CiHeart className='w-8 h-8 cursor-pointer ' />
+          </div>
           <IoPersonOutline className='w-8 h-8 cursor-pointer hidden sm:block' />
           <div className='flex'>
             <CiBag1 className='w-8 h-8 cursor-pointer' />

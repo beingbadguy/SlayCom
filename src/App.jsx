@@ -15,8 +15,14 @@ import Footer from './components/Footer';
 import React from 'react';
 
 function App() {
+  const mainContext = useContext(menuContext);
+  // console.log(mainContext.wishStatus, mainContext.menuStatus);
   return (
-    <div className='select-none'>
+    <div
+      className={`select-none ${mainContext.wishStatus ? 'h-[100vh]' : 'h-auto'} ${
+        mainContext.menuStatus ? 'h-[100vh]' : 'h-auto'
+      } `}
+    >
       <Header />
       <Menu />
       <Hero />
