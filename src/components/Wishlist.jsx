@@ -13,7 +13,7 @@ const Wishlist = ({ wish }) => {
 
   return (
     <div
-      className={`absolute top-0 bg-white h-auto min-h-[100vh] w-[100%] transition duration-1000 ${
+      className={`absolute top-0 bg-white h-auto min-h-[100vh] w-[100%] transition duration-1000 border-b-2 border-black  ${
         toggleWishlist ? 'translate-x-[-200%]' : 'translate-x-0'
       }  `}
     >
@@ -59,7 +59,7 @@ const Wishlist = ({ wish }) => {
                   console.log(updateRemove[index].status);
                 }}
               >
-                <MdDelete />
+                <MdDelete className='cursor-pointer' />
               </div>
             </div>
           </div>

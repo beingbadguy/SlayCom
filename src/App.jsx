@@ -19,8 +19,8 @@ function App() {
   // console.log(mainContext.wishStatus, mainContext.menuStatus);
   return (
     <div
-      className={`select-none ${mainContext.wishStatus ? 'h-[100vh]' : 'h-auto'} ${
-        mainContext.menuStatus ? 'h-[100vh]' : 'h-auto'
+      className={`select-none ${mainContext.wishStatus ? 'h-[99vh]' : 'h-auto'} ${
+        mainContext.menuStatus ? 'h-[99vh]' : 'h-auto'
       } `}
     >
       <Header />

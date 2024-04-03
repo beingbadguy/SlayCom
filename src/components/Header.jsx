@@ -40,7 +40,7 @@ const Header = () => {
       </div>
 
       {/* nav  */}
-      <div className='flex m-4 justify-between items-center md:ml-20 md:mr-20 relative'>
+      <div className=' flex m-4 justify-between items-center md:ml-20 md:mr-20 relative'>
         <div className='flex'>
           <img src='/logo.svg' className='h-[30px]' />
           <h1>layyyyyy</h1>
