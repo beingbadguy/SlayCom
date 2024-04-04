@@ -87,7 +87,7 @@ const Header = () => {
       <div
         className={` absolute ${
           !search ? 'translate-y-[-200%]' : 'translate-y-[0%]'
-        } flex justify-between p-2  transition duration-1000  delay-0  bg-white w-[100%] left-1 rounded-xl top-1`}
+        } flex justify-between p-2  transition duration-1000  delay-0  bg-white w-[100%] left-0  top-0`}
       >
         <input
           ref={inpRef}
