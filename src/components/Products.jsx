@@ -17,16 +17,13 @@ const Products = () => {
       ...item,
       id: index,
       name: `Product-${index}`,
-      price: Math.floor(Math.random() * 100 + 1),
+      // price: Math.floor(Math.random() * 100 + 1),
       status: false,
       isAddedToCart: false,
     };
   });
 
-  //  updatedArr.map((item, index) => ({
-  //    ...item,
-  //    status: false,
-  //  }));
+
 
   const [wishList, setwishList] = useState(updatedArr);
 

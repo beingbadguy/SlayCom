@@ -15,7 +15,6 @@ const Cart = ({ cart }) => {
 
   return (
     <>
-    
       <div
         className={`${
           ProItems ? 'translate-x-[-200%]' : ' translate-x-0'
@@ -67,15 +66,14 @@ const Cart = ({ cart }) => {
               {/* <input type='number' className=' border border-slate-900 w-10 mr-2 p-2' maxLength={2} /> */}
             </div>
           ))}
-
           {newCartArray.length == 0 ? (
             <h1 className='p-12'>
               You don't have anything in your cart, add something to checkout!
             </h1>
           ) : (
             <div className='flex'>
-              <h1 className='p-12  '>Your bill: {Newprice}</h1>
-              <button className='border border-black bg-green-300   m-12 p-1 '>Checkout</button>
+              <h1 className='p-12  '>Your bill: ${Newprice}</h1>
+              <button className='border  bg-green-300   m-12 p-1 '>Checkout</button>
             </div>
           )}
         </div>
