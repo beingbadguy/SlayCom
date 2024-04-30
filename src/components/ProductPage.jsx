@@ -70,7 +70,7 @@ const ProductDetail = () => {
           </div>
         </div>
         <div className='  w-[100%] md:w-[50%] p-10 flex flex-col gap-2'>
-          <h1 className='text-2xl font-bold mt-2'>{product?.title.toUpperCase}</h1>
+          <h1 className='text-2xl font-bold mt-2'>{product?.title}</h1>
           <p>{product?.description}</p>
           <div className='flex gap-2 mt-4'>
             <p className='font-bold'> ${product?.price}</p>
