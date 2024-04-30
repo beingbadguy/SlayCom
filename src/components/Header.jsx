@@ -12,6 +12,8 @@ import { MdArrowRightAlt } from 'react-icons/md';
 import { IoIosCloseCircleOutline } from 'react-icons/io';
 import { useState, useRef } from 'react';
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { SiAiqfome } from 'react-icons/si';
 
 const Header = () => {
   const menuyes = useContext(menuContext);
@@ -43,35 +45,39 @@ const Header = () => {
       <div className=' flex m-4 justify-between items-center md:ml-20 md:mr-20 relative'>
         <div className='flex'>
           <img src='/logo.svg' className='h-[30px]' />
-          <h1>layyyyyy</h1>
+          <Link to='/'>
+            <h1>layyyyyy</h1>
+          </Link>
         </div>
         <div>
           <h1 className='text-xl hidden sm:block'>Slayyyyyy</h1>
         </div>
-        <div className='flex gap-5'>
+        <div className='flex'>
           <div
             onClick={() => {
               setsearch(true);
               inpRef.current.focus();
             }}
           >
-            <CiSearch className='w-8 h-8 cursor-pointer ' />
+            <CiSearch className='w-8 h-8 cursor-pointer  mr-3 ' />
           </div>
           <div
             onClick={() => {
               menuyes.setwishStatus((menuyes.wishStatus = false));
             }}
           >
-            <CiHeart className='w-8 h-8 cursor-pointer ' />
+            <CiHeart className='w-8 h-8 cursor-pointer hidden md:block mr-3' />
           </div>
-          <IoPersonOutline className='w-8 h-8 cursor-pointer hidden sm:block' />
+          <Link to='/login'>
+            <SiAiqfome className='w-7 h-8 cursor-pointer  font-[50] md:block mr-3' />
+          </Link>
           <div
             className='flex'
             onClick={() => {
               menuyes.setcartStatus((menuyes.cartStatus = false));
             }}
           >
-            <CiBag1 className='w-8 h-8 cursor-pointer' />
+            <CiBag1 className='w-8 h-8 cursor-pointer  mr-3' />
             {/* <div className='text-green-800'>1</div> */}
           </div>
           <div

@@ -9,8 +9,6 @@ const Wishlist = ({ wish }) => {
   let wishHeart = wish.filter((item) => item.status === true);
   const [removeWish, setremoveWish] = useState(false);
 
-  // console.log(wishHeart);
-
   return (
     <div
       className={`absolute top-0 bg-white h-auto min-h-[100vh] w-[100%] transition duration-1000 border-b-2 border-black  ${

@@ -13,27 +13,29 @@ import Testimonials from './components/Testimonials';
 import Faqs from './components/Faqs';
 import Footer from './components/Footer';
 import React from 'react';
-
+import NewProducts from './components/NewProducts';
 function App() {
   const mainContext = useContext(menuContext);
   // console.log(mainContext.wishStatus, mainContext.menuStatus);
   return (
     <div
-      className={`select-none ${mainContext.wishStatus ? 'h-[99vh]' : 'h-auto'} ${
-        mainContext.menuStatus ? 'h-[99vh]' : 'h-auto'
-      } `}
+      // className={`select-none ${mainContext.wishStatus ? '' : 'h-auto'} ${
+      //   mainContext.menuStatus ? '' : 'h-auto'
+      // } `}
+      className='select-none'
     >
-      <Header />
-      <Menu />
+      {/* <Header /> */}
+      {/* <Menu /> */}
       <Hero />
       <Categories />
       <TimerSlider />
       <Products />
+      {/* <NewProducts /> */}
       <Company />
       <Slider />
       <Testimonials />
       <Faqs />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

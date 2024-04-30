@@ -1,0 +1,72 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { GiBrassEye } from 'react-icons/gi';
+import { GiBurningEye } from 'react-icons/gi';
+import { useState, useRef } from 'react';
+const Sign = () => {
+  const [pass, unsee] = useState(false);
+  const myPass = useRef();
+  return (
+    <div className=' flex-col md:flex-row flex items-center justify-between  gap-10 p-4'>
+      <div className='w-[100%] md:w-[50%]  bg-black'>
+        <h1 className='absolute left-[40%] md:left-[15%] p-2 font-bold'>
+          {/* <NavLink to='/'>Slayyyyyy</NavLink> */}
+        </h1>
+        <img
+          src='/chair.png'
+          alt=''
+          className='h-[32vh] sm:h-[60vh] md:h-[100vh] w-[100%] object-cover'
+        />
+      </div>
+      <div className='w-[100%] md:w-[50%] flex flex-col justify-center pl-6  md:pl-20  '>
+        <h1 className='text-2xl my-2'>Sign up</h1>
+        <p className='mt-2'>
+          Already have an account ?
+          <span className=' ml-2 text-[#38CB89]'>
+            <NavLink to='/login'>Log In</NavLink>
+          </span>
+        </p>
+        <form action='' className='my-4 flex gap-6 md:gap-10 flex-col w-[90%] md:w-[70%] '>
+          <input type='text' className=' border-b-2 p-2 outline-none' placeholder='Your name' />
+          <input type='text' className=' border-b-2 p-2 outline-none' placeholder='Username' />
+          <input
+            type='email'
+            className=' border-b-2 p-2 outline-none'
+            placeholder='Email address'
+          />
+          <div className='z-0 flex items-center relative '>
+            <input
+              ref={myPass}
+              type='password'
+              className=' border-b-2 w-[100%] p-2 outline-none'
+              placeholder='Password'
+            />
+            <div
+              onClick={() => {
+                unsee(!pass);
+                pass ? (myPass.current.type = 'password') : (myPass.current.type = 'text');
+              }}
+            >
+              {!pass ? (
+                <GiBrassEye className='absolute right-2 top-2 w-6 h-6 ' />
+              ) : (
+                <GiBurningEye className='absolute right-2 top-2 w-6 h-6 ' />
+              )}
+            </div>
+          </div>
+          <div className='flex gap-2 items-center'>
+            <input type='checkbox' name='' id='' />
+            <p>
+              I agree with <span className='text-black font-bold'>Privacy Policy</span> and
+              <span className='text-black font-bold'> Terms of use</span>
+            </p>
+          </div>
+          <button type='submit' className='p-3 bg-black text-white rounded-xl'>
+            Sign Up
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
+export default Sign;
