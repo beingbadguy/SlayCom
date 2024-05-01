@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { GiBrassEye } from 'react-icons/gi';
 import { GiBurningEye } from 'react-icons/gi';
 import { useState, useRef } from 'react';
@@ -61,9 +61,11 @@ const Sign = () => {
               <span className='text-black font-bold'> Terms of use</span>
             </p>
           </div>
-          <button type='submit' className='p-3 bg-black text-white rounded-xl'>
-            Sign Up
-          </button>
+          <Link to='/'>
+            <button type='submit' className='p-3 bg-black text-white rounded-xl'>
+              Sign Up
+            </button>
+          </Link>
         </form>
       </div>
     </div>
