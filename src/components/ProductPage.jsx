@@ -119,7 +119,7 @@ const ProductDetail = () => {
               <p className='text-black'>Wishlist</p>
             </div>
           </div>
-          <p className='bg-black p-2 text-white text-center rounded hover:bg-white hover:text-black transition-all cursor-pointer mt-2'>
+          <p className='bg-black p-2 text-white text-center rounded hover:bg-white hover:text-black transition-all cursor-pointer mt-2  '>
             Add to Cart
           </p>
         </div>

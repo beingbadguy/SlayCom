@@ -45,11 +45,13 @@ const Products = () => {
               setview(-1);
             }}
           >
-            <img
-              src={`${item.thumbnail}`}
-              className=' rounded-xl p-1 border w-[300px]  h-[300px] object-cover cursor-pointer'
-              alt=''
-            />
+            <Link to={`/${item.id}`}>
+              <img
+                src={`${item.thumbnail}`}
+                className=' rounded-xl p-1 border w-[300px]  h-[300px] object-cover cursor-pointer'
+                alt=''
+              />
+            </Link>
             <div className='flex items-center justify-between w-[285px]'>
               <p className='font-semibold text-xl p-1'>{item.title}</p>
 
@@ -70,8 +72,8 @@ const Products = () => {
               <Link
                 key={item.id}
                 to={`/${item.id}`}
-                className={`cursor-pointer text-center mx-auto m-3 w-[90%] rounded p-1 bg-black text-white ${
-                  view === index ? 'block md:block ' : 'block md:hidden'
+                className={`cursor-pointer text-center mx-auto m-3 w-[90%] rounded p-1 bg-black text-white hover:opacity-50  duration-200  opacity-50${
+                  view === index ? 'block md:block ' : 'block md:hidden '
                 } transition-all`}
               >
                 View
