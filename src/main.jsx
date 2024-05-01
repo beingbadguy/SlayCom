@@ -12,6 +12,8 @@ import Sign from './components/Sign.jsx';
 import Login from './components/Login.jsx';
 import CategoryProduct from './components/CategoryProduct.jsx';
 import Layout from './layout/Layout.jsx';
+import SearchProduct from './components/SearchProduct.jsx';
+import Error from './components/Error.jsx';
 
 const router = createBrowserRouter([
   {
@@ -52,8 +54,12 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: 'category/:category',
+    path: '/category/:category',
     element: <CategoryProduct />,
+  },
+  {
+    path: '/search',
+    element: <SearchProduct />,
   },
 ]);
 
