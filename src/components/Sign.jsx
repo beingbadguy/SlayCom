@@ -62,7 +62,7 @@ const Sign = () => {
             </p>
           </div>
           <Link to='/'>
-            <button type='submit' className='p-3 bg-black text-white rounded-xl'>
+            <button type='submit' className='p-3 bg-black text-white rounded-xl w-[100%]'>
               Sign Up
             </button>
           </Link>
