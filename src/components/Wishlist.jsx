@@ -4,6 +4,8 @@ import { useContext } from 'react';
 import { IoIosClose } from 'react-icons/io';
 const Wishlist = () => {
   const { wishlist, setWishlist } = useContext(menuContext);
+  let totalCost = wishlist.reduce((acc, price) => acc + price.price, 0);
+  console.log(totalCost);
 
   return (
     <div className='p-6'>
@@ -19,12 +21,16 @@ const Wishlist = () => {
               updatedWishlist.splice(index, 1);
               setWishlist(updatedWishlist);
             }}
-            className='text-2xl'
+            className='text-2xl cursor-pointer'
           >
             <IoIosClose />
           </div>
         </div>
       ))}
+
+      <div className='font-bold mt-10'>
+        <p>Total Cost - ${totalCost}</p>
+      </div>
     </div>
   );
 };

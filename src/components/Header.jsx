@@ -63,7 +63,7 @@ const Header = () => {
           </div>
           <div
             onClick={() => {
-              menuyes.setwishStatus((menuyes.wishStatus = false));
+              // menuyes.setwishStatus((menuyes.wishStatus = false));
             }}
           >
             <Link to='/wishlist' className='relative'>
@@ -83,7 +83,6 @@ const Header = () => {
             }}
           >
             <CiBag1 className='w-8 h-8 cursor-pointer  hidden md:block mr-3' />
-            {/* <div className='text-green-800'>1</div> */}
           </div>
           <div
             onClick={() => {

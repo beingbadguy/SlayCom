@@ -17,13 +17,12 @@ const Products = () => {
 
   return (
     <>
-      {/* <Wishlist wish={wishList} /> */}
       <h1 className=' ml-14 sm:ml-16 mb-2 m-5 font-bold text-xl'>New Arrivals</h1>
       <div className='flex flex-wrap justify-center '>
         {arr.map((item, index) => (
           <div
             key={index}
-            className='border border-slate-200 rounded-xl flex flex-col flex-wrap items-start  m-6 h-[470px] w-[300px]  '
+            className='border border-slate-200 rounded-xl flex flex-row m-4 flex-wrap items-start  h-[500px] w-[150px] md:w-[300px]  '
             onMouseOver={() => {
               setview(index);
             }}
@@ -40,14 +39,11 @@ const Products = () => {
             </Link>
             <div className='flex items-center justify-between w-[285px]'>
               <p className='font-semibold text-xl p-1'>{item.title}</p>
-
-              <div></div>
             </div>
             <div className='flex items-center justify-between  w-[280px]'>
               <p id='price' className='italic p-1'>
                 ${item.price}
               </p>
-             
             </div>
             <div className='flex justify-center items-center w-[100%]'>
               <Link

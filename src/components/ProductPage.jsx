@@ -12,9 +12,8 @@ const ProductDetail = () => {
   const [heart, setHeart] = useState(true);
   const [imgurl, setImgurl] = useState();
   const { wishlist, setWishlist } = useContext(menuContext);
-  console.log(wishlist);
 
-  console.log(imgurl);
+  console.log(itemNumber);
 
   const decrement = () => {
     itemNumber == 0 ? null : setitemNumber(itemNumber - 1);
@@ -114,13 +113,18 @@ const ProductDetail = () => {
             <div
               className='bg-white w-full rounded text-center  border border-black p-2  transition-all cursor-pointer flex gap-2 items-center justify-center '
               onClick={() => {
-                setWishlist([...wishlist, product]);
+                let itemexits = wishlist.some((item) => item.id === product.id);
+
+                if (!itemexits) {
+                  setWishlist([...wishlist, product]);
+                }
               }}
             >
-              <div>
-                <FaHeart className={` ${heart ? ' text-black' : 'text-red-700'} `} />
-              </div>
-              <p className='text-black'>Wishlist</p>
+              <p className='text-black'>
+                {product && wishlist.some((item) => item?.id === product.id)
+                  ? 'Added to wishlist'
+                  : 'Add to wishlist'}
+              </p>
             </div>
           </div>
           <p className='bg-black p-2 text-white text-center rounded hover:bg-white hover:text-black transition-all cursor-pointer mt-2  '>
