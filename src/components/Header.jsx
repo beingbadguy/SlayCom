@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 import { SiAiqfome } from 'react-icons/si';
 
 const Header = () => {
-  const menuyes = useContext(menuContext);
+  const { menuyes, wishlist } = useContext(menuContext);
 
   const [search, setsearch] = useState(false);
   const inpRef = useRef();
@@ -66,7 +66,12 @@ const Header = () => {
               menuyes.setwishStatus((menuyes.wishStatus = false));
             }}
           >
-            <CiHeart className='w-8 h-8 cursor-pointer hidden md:block mr-3' />
+            <Link to='/wishlist' className='relative'>
+              <CiHeart className='w-8 h-8 cursor-pointer block mr-3' />
+              <div className='absolute top-[0] left-5 bg-black text-white rounded-full text-[10px] w-4 h-4 p-2  text-center flex items-center justify-center'>
+                {wishlist.length}
+              </div>
+            </Link>
           </div>
           <Link to='/login'>
             <SiAiqfome className='w-7 h-8 cursor-pointer  font-[50] md:block mr-3' />
@@ -77,7 +82,7 @@ const Header = () => {
               menuyes.setcartStatus((menuyes.cartStatus = false));
             }}
           >
-            <CiBag1 className='w-8 h-8 cursor-pointer  mr-3' />
+            <CiBag1 className='w-8 h-8 cursor-pointer  hidden md:block mr-3' />
             {/* <div className='text-green-800'>1</div> */}
           </div>
           <div

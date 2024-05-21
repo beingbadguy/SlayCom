@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 // import { CiHeart } from 'react-icons/ci';FaHeart
 import { FaHeart } from 'react-icons/fa';
+import { menuContext } from '../context/Context';
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -10,6 +11,9 @@ const ProductDetail = () => {
   const [itemNumber, setitemNumber] = useState(1);
   const [heart, setHeart] = useState(true);
   const [imgurl, setImgurl] = useState();
+  const { wishlist, setWishlist } = useContext(menuContext);
+  console.log(wishlist);
+
   console.log(imgurl);
 
   const decrement = () => {
@@ -110,7 +114,7 @@ const ProductDetail = () => {
             <div
               className='bg-white w-full rounded text-center  border border-black p-2  transition-all cursor-pointer flex gap-2 items-center justify-center '
               onClick={() => {
-                setHeart(!heart);
+                setWishlist([...wishlist, product]);
               }}
             >
               <div>

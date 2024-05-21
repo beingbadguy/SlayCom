@@ -9,6 +9,7 @@ export const ContextProvider = (props) => {
   const [wishStatus, setwishStatus] = useState(true);
   const [cartStatus, setcartStatus] = useState(true);
   const [items, setitems] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
 
   // const Pro = {[
   //   {
@@ -136,6 +137,7 @@ export const ContextProvider = (props) => {
 
   // const [products, setProducts] = useState([]);
 
+  
   const fetchProducts = async () => {
     try {
       const response = await fetch('https://dummyjson.com/products');
@@ -167,6 +169,8 @@ export const ContextProvider = (props) => {
         setwishStatus,
         cartStatus,
         setcartStatus,
+        wishlist,
+        setWishlist,
       }}
     >
       {props.children}

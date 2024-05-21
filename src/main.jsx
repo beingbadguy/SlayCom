@@ -14,6 +14,7 @@ import CategoryProduct from './components/CategoryProduct.jsx';
 import Layout from './layout/Layout.jsx';
 import SearchProduct from './components/SearchProduct.jsx';
 import Error from './components/Error.jsx';
+import Wishlist from './components/Wishlist.jsx';
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login />,
+      },
+      {
+        path: '/wishlist',
+        element: <Wishlist />,
       },
     ],
   },
