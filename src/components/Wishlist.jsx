@@ -10,8 +10,14 @@ const Wishlist = () => {
   return (
     <div className='p-6'>
       <h1>Your Wishlist ({wishlist.length})</h1>
-      {wishlist.length <= 0 ? <h2 className='h-[44vh] flex items-center justify-center'>Add some products to the wishlist...</h2> : ''}
-      
+      {wishlist.length <= 0 ? (
+        <h2 className='h-[44vh] flex items-center justify-center'>
+          Add some products to the wishlist...
+        </h2>
+      ) : (
+        ''
+      )}
+
       {wishlist.map((item, index) => (
         <div key={index} className='flex mt-4 items-center justify-between gap-6'>
           <img src={item.thumbnail} alt='' className='h-[100px] w-[100px]' />

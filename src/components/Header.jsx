@@ -16,11 +16,11 @@ import { Link } from 'react-router-dom';
 import { SiAiqfome } from 'react-icons/si';
 
 const Header = () => {
-  const { menuyes, wishlist } = useContext(menuContext);
+  const { menuyes, wishlist, menuStatus, setmenuStatus } = useContext(menuContext);
 
   const [search, setsearch] = useState(false);
   const inpRef = useRef();
-
+  console.log(menuStatus);
   return (
     <div>
       {/* ad  */}
@@ -63,7 +63,7 @@ const Header = () => {
           </div>
           <div
             onClick={() => {
-              // menuyes.setwishStatus((menuyes.wishStatus = false));
+              menuyes.setwishStatus((menuyes.wishStatus = false));
             }}
           >
             <Link to='/wishlist' className='relative'>
@@ -86,7 +86,7 @@ const Header = () => {
           </div>
           <div
             onClick={() => {
-              menuyes.setmenuStatus(false);
+              setmenuStatus(false);
             }}
           >
             <CiMenuFries className='w-8 h-8 cursor-pointer sm:hidden' />
