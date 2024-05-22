@@ -12,8 +12,7 @@ const ProductDetail = () => {
   const [heart, setHeart] = useState(true);
   const [imgurl, setImgurl] = useState();
   const { wishlist, setWishlist } = useContext(menuContext);
-
-  console.log(itemNumber);
+  console.log(wishlist);
 
   const decrement = () => {
     itemNumber == 0 ? null : setitemNumber(itemNumber - 1);
@@ -30,9 +29,7 @@ const ProductDetail = () => {
 
         setProduct(data);
         setImage(data.images);
-      } catch (error) {
-        console.log(error);
-      }
+      } catch (error) {}
     };
 
     fetchProduct();
@@ -116,7 +113,15 @@ const ProductDetail = () => {
                 let itemexits = wishlist.some((item) => item.id === product.id);
 
                 if (!itemexits) {
-                  setWishlist([...wishlist, product]);
+                  setWishlist([
+                    ...wishlist,
+                    {
+                      ...product,
+                      itemNumber: itemNumber,
+                      totalPrice: itemNumber * (product?.price || 0),
+                    },
+                  ]);
+                  console.log(wishlist);
                 }
               }}
             >

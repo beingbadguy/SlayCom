@@ -2,16 +2,14 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <div className='ml-20'>
-      <section className='relative z-10 overflow-hidden bg-white py-20 dark:bg-dark lg:py-[120px]'>
+    <div className='mx-10 my-10 md:ml-20 md:mr-20'>
+      <section className='relative z-10 overflow-hidden bg-white dark:bg-dark lg:py-[120px]'>
         <div className='container'>
           <div className='-mx-4 flex flex-wrap lg:justify-between'>
             <div className='w-full px-4 lg:w-1/2 xl:w-6/12'>
-              <div className='mb-12 max-w-[570px] lg:mb-0'>
+              <div className=' max-w-[570px] lg:mb-0'>
                 <span className='mb-4 block text-base font-semibold text-primary'>Contact Us</span>
-                <h2 className='mb-6 text-[32px] font-bold uppercase text-dark dark:text-white sm:text-[40px] lg:text-[36px] xl:text-[40px]'>
-                  GET IN TOUCH WITH US
-                </h2>
+
                 <p className='mb-9 text-base leading-relaxed text-body-color dark:text-dark-6'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius tempor
                   incididunt ut labore e dolore magna aliqua. Ut enim adiqua minim veniam quis
@@ -37,7 +35,7 @@ const Contact = () => {
                       Our Location
                     </h4>
                     <p className='text-base text-body-color dark:text-dark-6'>
-                      99 S.t Jomblo Park Pekanbaru 28292. Indonesia
+                      8, B.R Ambedkar Park Shahdara 110032. India
                     </p>
                   </div>
                 </div>
@@ -77,7 +75,7 @@ const Contact = () => {
                       Phone Number
                     </h4>
                     <p className='text-base text-body-color dark:text-dark-6'>
-                      (+62)81 414 257 9980
+                      (+91) 96 67 54 97 69
                     </p>
                   </div>
                 </div>
@@ -102,7 +100,7 @@ const Contact = () => {
                       Email Address
                     </h4>
                     <p className='text-base text-body-color dark:text-dark-6'>
-                      info@yourdomain.com
+                      authorisedaman@hotmail.com
                     </p>
                   </div>
                 </div>
@@ -123,7 +121,7 @@ const Contact = () => {
                   <div>
                     <button
                       type='submit'
-                      className='w-full rounded border border-primary bg-primary p-3 text-white transition hover:bg-opacity-90'
+                      className='w-full rounded border border-primary bg-green-200 p-3 text-black transition hover:bg-opacity-90'
                     >
                       Send Message
                     </button>

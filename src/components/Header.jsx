@@ -20,7 +20,6 @@ const Header = () => {
 
   const [search, setsearch] = useState(false);
   const inpRef = useRef();
-  console.log(menuStatus);
   return (
     <div>
       {/* ad  */}

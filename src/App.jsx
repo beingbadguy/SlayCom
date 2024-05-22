@@ -16,26 +16,18 @@ import React from 'react';
 import NewProducts from './components/NewProducts';
 function App() {
   const mainContext = useContext(menuContext);
-  // console.log(mainContext.wishStatus, mainContext.menuStatus);
   return (
     <div
-      // className={`select-none ${mainContext.wishStatus ? '' : 'h-auto'} ${
-      //   mainContext.menuStatus ? '' : 'h-auto'
-      // } `}
       className='select-none'
     >
-      {/* <Header /> */}
-      {/* <Menu /> */}
       <Hero />
       <Categories />
       <TimerSlider />
       <Products />
-      {/* <NewProducts /> */}
       <Company />
       <Slider />
       <Testimonials />
       <Faqs />
-      {/* <Footer /> */}
     </div>
   );
 }

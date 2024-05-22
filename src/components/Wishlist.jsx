@@ -4,8 +4,9 @@ import { useContext } from 'react';
 import { IoIosClose } from 'react-icons/io';
 const Wishlist = () => {
   const { wishlist, setWishlist } = useContext(menuContext);
-  let totalCost = wishlist.reduce((acc, price) => acc + price.price, 0);
+  let totalCost = wishlist.reduce((acc, price) => acc + price.totalPrice, 0);
   console.log(totalCost);
+  console.log(wishlist);
 
   return (
     <div className='p-6'>
@@ -22,7 +23,8 @@ const Wishlist = () => {
         <div key={index} className='flex mt-4 items-center justify-between gap-6'>
           <img src={item.thumbnail} alt='' className='h-[100px] w-[100px]' />
           <p>{item.title}</p>
-          <p>${item.price}</p>
+          <p>{item.totalPrice / item.price}</p>
+          <p>${item.totalPrice}</p>
           <div
             onClick={() => {
               const updatedWishlist = [...wishlist];

@@ -17,12 +17,12 @@ const Products = () => {
 
   return (
     <>
-      <h1 className=' ml-14 sm:ml-16 mb-2 m-5 font-bold text-xl'>New Arrivals</h1>
+      <h1 className='  sm:ml-16 mb-2 m-5 font-bold text-xl'>New Arrivals</h1>
       <div className='flex flex-wrap justify-center '>
         {arr.map((item, index) => (
           <div
             key={index}
-            className='border border-slate-200 rounded-xl flex flex-row m-4 flex-wrap items-start  h-[500px] w-[150px] md:w-[300px]  '
+            className='border border-slate-200 rounded-xl flex flex-row m-4 flex-wrap items-start  h-[500px] w-[170px] md:w-[300px]  '
             onMouseOver={() => {
               setview(index);
             }}
