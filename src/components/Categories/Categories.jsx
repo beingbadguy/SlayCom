@@ -14,7 +14,7 @@ const Categories = () => {
       const response = await fetch('https://dummyjson.com/products/categories');
 
       const data = await response.json();
-      // console.log(data);
+      console.log(data);
       setData(data);
     } catch (error) {
       console.log(error);
@@ -38,11 +38,10 @@ const Categories = () => {
       <ul className='p-6'>
         {newdata.map((item, index) => (
           <li key={index} type='disc' className='bg-green-100 text-black mt-2 p-2'>
-            <NavLink to={`/category/${item}`}>{item}</NavLink>
+            <NavLink to={`/category/${item.slug}`}>{item.slug}</NavLink>
           </li>
         ))}
       </ul>
-      {/* <Products /> */}
     </div>
   );
 };
