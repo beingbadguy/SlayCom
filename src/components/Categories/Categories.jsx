@@ -1,49 +1,54 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import Header from '../Header';
-import Footer from '../Footer';
-import Menu from '../Menu';
-import { useParams } from 'react-router-dom';
 
 const Categories = () => {
-  const [newdata, setData] = useState([]);
+  const [newData, setData] = useState([]);
+  const [error, setError] = useState(null);
 
   const fetchCategory = async () => {
     try {
       const response = await fetch('https://dummyjson.com/products/categories');
-
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
       const data = await response.json();
-      // console.log(data);
       setData(data);
     } catch (error) {
-      console.log(error);
+      setError(error.message);
+      console.error('Error fetching categories:', error);
     }
   };
 
   useEffect(() => {
     fetchCategory();
   }, []);
-  console.log(newdata);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <div>
       <div className='flex p-4 text-[12px]'>
-        <Link to='/' className=' text-green-500'>
-          Home -{' '}
+        <Link to='/' className='text-green-500'>
+          Home -
         </Link>
-        <p> Categories ({newdata.length})</p>
+        <p> Categories ({newData.length})</p>
       </div>
 
       <ul className='p-6'>
-        {newdata.map((item, index) => (
-          <li key={index} type='disc' className='bg-green-100 text-black mt-2 p-2'>
-            <NavLink to={`/category/${item}`}>{item}</NavLink>
-          </li>
-        ))}
+        {newData.length > 0 ? (
+          newData.map((item, index) => (
+            <li key={index} className='bg-green-100 text-black mt-2 p-2'>
+              <NavLink to={`/category/${item}`}>{item}</NavLink>
+            </li>
+          ))
+        ) : (
+          <li>No categories available</li>
+        )}
       </ul>
-      {/* <Products /> */}
     </div>
   );
 };
+
 export default Categories;
